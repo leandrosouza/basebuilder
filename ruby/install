@@ -19,7 +19,7 @@ echo 'eval "$(rbenv init -)"' >> /home/ubuntu/.bash_profile
 git clone https://github.com/sstephenson/ruby-build.git /home/ubuntu/.rbenv/plugins/ruby-build
 sudo chown ubuntu:ubuntu /home/ubuntu/.bash_profile
 sudo chown -R ubuntu:ubuntu /home/ubuntu/.rbenv
-/bin/su - ubuntu -c "rbenv install 2.2.0"
+/bin/su - ubuntu -c "rbenv install 2.2.0 -v"
 
 # Fix ruby2.0 update-alternatives
 update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 181
