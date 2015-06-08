@@ -11,14 +11,14 @@ add-apt-repository ppa:brightbox/ruby-ng -y
 
 apt-get update
 
-DEBIAN_FRONTEND=noninteractive apt-get install -qqy autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
+DEBIAN_FRONTEND=noninteractive apt-get install -qqy ruby1.9.3 ruby1.9.1-dev ruby2.0 ruby2.0-dev ruby2.1 ruby2.1-dev ruby2.2 ruby2.2-dev
 git clone https://github.com/sstephenson/rbenv.git /home/ubuntu/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/ubuntu/.bash_profile
 echo 'eval "$(rbenv init -)"' >> /home/ubuntu/.bash_profile
 git clone https://github.com/sstephenson/ruby-build.git /home/ubuntu/.rbenv/plugins/ruby-build
 sudo chown ubuntu:ubuntu /home/ubuntu/.bash_profile
 sudo chown -R ubuntu:ubuntu /home/ubuntu/.rbenv
-# /bin/su - ubuntu rbenv install 2.2.0
+#sudo -u ubuntu rbenv install 2.2.0
 
 # Fix ruby2.0 update-alternatives
 update-alternatives --install /usr/bin/gem gem /usr/bin/gem2.0 181
