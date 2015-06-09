@@ -17,5 +17,5 @@ run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilde
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	cp /var/lib/tsuru/scala/deploy /var/lib/tsuru
-run	cp /var/lib/tsuru/scala/start /var/lib/tsuru
+run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run	/var/lib/tsuru/scala/install
