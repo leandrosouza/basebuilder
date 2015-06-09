@@ -15,8 +15,8 @@ fi
 
 echo "-- Using ruby version: ${RUBY_VERSION} --"
 
-sudo gem update --system
-sudo gem install bundler --no-rdoc --no-ri
+gem update --system
+gem install bundler --no-rdoc --no-ri
 
 if [ -f ${CURRENT_DIR}/Gemfile ]; then
     pushd $CURRENT_DIR && bundle install --deployment --path ${CURRENT_DIR}/../vendor/bundle --without ${BUNDLE_WITHOUT-development:test}
