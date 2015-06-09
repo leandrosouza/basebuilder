@@ -6,7 +6,7 @@
 
 SOURCE_DIR=/var/lib/tsuru
 $SOURCE_DIR/base/install
-$SBT_DIR=/opt/sbt
+SBT_DIR=/opt/sbt
 
 apt-get update
 apt-get install -y python-pycurl
