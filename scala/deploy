@@ -8,6 +8,4 @@ SOURCE_DIR=/var/lib/tsuru
 source ${SOURCE_DIR}/base/deploy
 source ${SOURCE_DIR}/config
 
-echo "copiando o sbt para o bin"
-sudo cp $SOURCE_DIR/scala/sbt /bin/sbt
-sudo chmod 755 /bin/sbt
+echo "Platform Scala"
