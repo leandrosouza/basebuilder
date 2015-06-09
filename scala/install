@@ -18,5 +18,3 @@ mkdir -p $SBT_DIR
 wget https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.7/sbt-launch.jar?_ga=1.134549873.1636856000.1421340642 -O $SBT_DIR/sbt.jar --no-check-certificate
 chmod 755 $SBT_DIR/sbt.jar
 chown -R ubuntu: $SBT_DIR
-cp $SOURCE_DIR/scala/sbt /bin/sbt
-chmod 755 /bin/sbt
