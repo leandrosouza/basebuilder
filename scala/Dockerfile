@@ -16,6 +16,6 @@ run	apt-get install wget software-properties-common -y --force-yes
 run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
-run	cp /var/lib/tsuru/java/deploy /var/lib/tsuru
-run	cp /var/lib/tsuru/java/start /var/lib/tsuru
-run	/var/lib/tsuru/java/install
+run	cp /var/lib/tsuru/scala/deploy /var/lib/tsuru
+run	cp /var/lib/tsuru/scala/start /var/lib/tsuru
+run	/var/lib/tsuru/scala/install
