@@ -1,0 +1,19 @@
+#!/bin/bash -e
+
+# Copyright 2015 basebuilder authors. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+SOURCE_DIR=/var/lib/tsuru
+$SOURCE_DIR/base/install
+$SBT_DIR=/opt/sbt
+
+apt-get update
+apt-get install -y python-pycurl
+add-apt-repository -y ppa:webupd8team/java
+echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+apt-get install -y --force-yes oracle-java8-installer
+mkdir -p $SBT_DIR
+wget https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/0.13.7/sbt-launch.jar?_ga=1.134549873.1636856000.1421340642 -O $SBT_DIR/sbt.jar --no-check-certificate
+chmod 755 $SBT_DIR/sbt.jar
+chown -R ubuntu: $SBT_DIR
