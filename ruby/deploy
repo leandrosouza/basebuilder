@@ -11,6 +11,9 @@ source ${SOURCE_DIR}/config
 if [ -f ${CURRENT_DIR}/.ruby-version -a "${RUBY_VERSION}" == "" ]; then
     RUBY_VERSION=$(cat ${CURRENT_DIR}/.ruby-version)
     rbenv global $RUBY_VERSION
+else
+    echo "You must create a file .ruby-version"
+    exit 1
 fi
 
 echo "-- Using ruby version: ${RUBY_VERSION} --"
