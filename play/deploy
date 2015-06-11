@@ -9,7 +9,7 @@ source /var/lib/tsuru/base/deploy
 echo "Building..."
 cd /home/application/current
 dir /var/lib/activator --recursive
-/var/lib/activator/activator stage
+#/var/lib/activator/activator stage
 
 echo "Procfile:"
 cat /home/application/current/Procfile
