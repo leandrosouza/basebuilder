@@ -6,7 +6,11 @@
 
 SOURCE_DIR=/var/lib/tsuru
 $SOURCE_DIR/base/install
-apt-get install gcc make curl libpcre3-dev zlib1g-dev nginx -y
+apt-get install gcc make curl libpcre3-dev zlib1g-dev -y
+echo "deb http://ppa.launchpad.net/nginx/stable/ubuntu lucid main" > /etc/apt/sources.list.d/nginx-stable-lucid.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys C300EE8C
+apt-get update
+apt-get install nginx -y
 rm -rf /var/log/nginx /var/lib/nginx
 mkdir -p /var/log/nginx /var/lib/nginx
 chown -R ubuntu:ubuntu /var/lib/nginx /var/log/nginx
