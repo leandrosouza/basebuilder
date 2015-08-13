@@ -19,3 +19,4 @@ run	cp /var/lib/tsuru/nodejs/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run	/var/lib/tsuru/base/install
 run	/var/lib/tsuru/nodejs/install
+run      ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
