@@ -19,3 +19,4 @@ run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	cp /var/lib/tsuru/scala/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run	/var/lib/tsuru/scala/install
+run      ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
