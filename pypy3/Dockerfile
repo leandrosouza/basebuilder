@@ -19,9 +19,9 @@ run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run	cp /var/lib/tsuru/python3/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
 run	/var/lib/tsuru/base/install
-wget https://bitbucket.org/pypy/pypy/downloads/pypy3-2.4.0-linux64.tar.bz2
-tar xf pypy3-2.4.0-linux64.tar.bz2 -C /opt
-ln -s /opt/pypy3-2.4.0-linux64/bin/pypy3 /usr/bin/pypy3
-curl -O https://bootstrap.pypa.io/get-pip.py | pypy3 get-pip.py
-ln -s /opt/pypy3-2.4.0-linux64/bin/pip3 /usr/bin/pip3
+run wget https://bitbucket.org/pypy/pypy/downloads/pypy3-2.4.0-linux64.tar.bz2
+run tar xf pypy3-2.4.0-linux64.tar.bz2 -C /opt
+run ln -s /opt/pypy3-2.4.0-linux64/bin/pypy3 /usr/bin/pypy3
+run curl -O https://bootstrap.pypa.io/get-pip.py | pypy3 get-pip.py
+run ln -s /opt/pypy3-2.4.0-linux64/bin/pip3 /usr/bin/pip3
 run ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
