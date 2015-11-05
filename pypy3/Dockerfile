@@ -25,3 +25,4 @@ run ln -s /opt/pypy3-2.4.0-linux64/bin/pypy3 /usr/bin/pypy3
 run curl -O https://bootstrap.pypa.io/get-pip.py | pypy3 get-pip.py
 run ln -s /opt/pypy3-2.4.0-linux64/bin/pip3 /usr/bin/pip3
 run ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+run	/var/lib/tsuru/pypy3/install
