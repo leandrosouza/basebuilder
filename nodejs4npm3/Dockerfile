@@ -19,5 +19,5 @@ run    /var/lib/tsuru/base/install
 run	   npm install -g npm@3
 run    npm install -g gulp bower node-gyp pm2
 run    npm install -g n
-run    n 4.2.1
+run    n 4.4.3
 run    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
