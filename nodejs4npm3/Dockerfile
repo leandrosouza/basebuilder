@@ -17,7 +17,7 @@ run    apt-get update
 run    apt-get install nodejs -y --force-yes
 run    /var/lib/tsuru/base/install
 run	   npm install -g npm3
-run    npm install -g gulp bower node-gyp pm2
-run    npm install -g n
+run    npm3 install -g gulp bower node-gyp pm2
+run    npm3 install -g n
 run    n 4.2.1
 run    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
