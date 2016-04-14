@@ -16,7 +16,7 @@ run    echo 'deb https://deb.nodesource.com/node_0.12 trusty main' > /etc/apt/so
 run    apt-get update
 run    apt-get install nodejs -y --force-yes
 run    /var/lib/tsuru/base/install
-run	   npm install -g npm@latest
+run	   npm install -g npm@3
 run    npm install -g gulp bower node-gyp pm2
 run    npm install -g n
 run    n 4.2.1
