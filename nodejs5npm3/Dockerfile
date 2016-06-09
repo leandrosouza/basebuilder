@@ -19,5 +19,5 @@ run    /var/lib/tsuru/base/install
 run    npm install -g gulp bower node-gyp pm2
 run    npm install -g n
 run    n 5.5.0
-run    npm install -g npm@3
+run    curl -L https://npmjs.org/install.sh | sh
 run    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
