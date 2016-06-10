@@ -21,6 +21,5 @@ run     cp /var/lib/tsuru/base/start /var/lib/tsuru
 run     curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 run     apt-get update
 run     apt-get install nodejs -y --force-yes
-run	gem install sass compass
 run	npm install -g gulp
 run     /var/lib/tsuru/static/install
