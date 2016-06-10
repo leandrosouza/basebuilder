@@ -12,7 +12,7 @@ env     LANG en_US.UTF-8
 env     LANGUAGE en_US:en
 env     LC_ALL en_US.UTF-8
 run     apt-get update
-run     apt-get install wget curl apt-transport-https -y --force-yes
+run     apt-get install wget curl apt-transport-https ruby-full -y --force-yes
 run     wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run     mkdir /var/lib/tsuru
 run     tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
@@ -21,4 +21,6 @@ run     cp /var/lib/tsuru/base/start /var/lib/tsuru
 run     curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 run     apt-get update
 run     apt-get install nodejs -y --force-yes
+run	gem install sass compass
+run	npm install -g gulp
 run     /var/lib/tsuru/static/install
