@@ -21,6 +21,7 @@ run     curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash -
 run     apt-get update
 run     apt-get install ruby-full -y --force-yes
 run     apt-get install nodejs -y --force-yes
+run	apt-get isntall build-essential
 run     gem install sass compass
 run     npm install gulp
 run     /var/lib/tsuru/static/install
