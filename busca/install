@@ -19,6 +19,9 @@ rm typesafe-activator-${ACTIVATOR_VERSION}.zip
 mv activator-${ACTIVATOR_VERSION} /var/lib/activator
 chown -R ubuntu:ubuntu /var/lib/activator
 
+echo "Instalando Grunt"
+npm install -g grunt-cli
+
 echo "Installing openjdk 1.8.0..."
 add-apt-repository -y ppa:openjdk-r/ppa
 apt-get update
