@@ -22,9 +22,9 @@ run chmod -R 777 /var/lib/tsuru
 run curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 run apt-get update
 run apt-get install nodejs -y --force-yes
-run /var/lib/tsuru/base/install
 run npm install -g grunt-cli
 run npm install
+run /var/lib/tsuru/base/install
 run /var/lib/activator/activator clean stage
 run curl -L https://npmjs.org/install.sh | sh
 run /var/lib/tsuru/play/install
