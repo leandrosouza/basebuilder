@@ -24,5 +24,4 @@ run apt-get update
 run apt-get install nodejs -y --force-yes
 run /var/lib/tsuru/base/install
 run /var/lib/activator/activator clean stage
-run curl -L https://npmjs.org/install.sh | sh
-run /var/lib/tsuru/play/install
+run /var/lib/tsuru/busca/install
