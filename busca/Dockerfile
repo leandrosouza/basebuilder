@@ -18,9 +18,8 @@ run mkdir /var/lib/tsuru
 run tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run cp /var/lib/tsuru/play/deploy /var/lib/tsuru
 run cp /var/lib/tsuru/base/start /var/lib/tsuru
-run chmod -R 777 /var/lib/tsuru
-run curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
-run echo 'deb https://deb.nodesource.com/node_0.12 trusty main' > /etc/apt/sources.list.d/nodesource.list
+run chmod -R 777 /var/lib/tsuru 
+run curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 run apt-get update
 run apt-get install nodejs -y --force-yes
 run /var/lib/tsuru/base/install
