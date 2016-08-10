@@ -23,5 +23,4 @@ run curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 run apt-get update
 run apt-get install nodejs -y --force-yes
 run /var/lib/tsuru/base/install
-run /var/lib/activator/activator clean stage
 run /var/lib/tsuru/busca/install
