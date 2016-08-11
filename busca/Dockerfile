@@ -12,7 +12,7 @@ env LANG en_US.UTF-8
 env LANGUAGE en_US:en
 env LC_ALL en_US.UTF-8
 run apt-get update
-run apt-get install wget -y --force-yes
+run    DEBIAN_FRONTEND=noninteractive apt-get install wget curl apt-transport-https -y --force-yes
 run wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run mkdir /var/lib/tsuru
 run tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
