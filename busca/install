@@ -21,14 +21,6 @@ chown -R ubuntu:ubuntu /var/lib/activator
 
 echo "Instalando Grunt"
 npm install -g grunt-cli
-npm install -g grunt@"0.4.5"
-npm install -g grunt-autoprefixer@"3.0.3"
-npm install -g grunt-contrib-jasmine
-npm install -g grunt-contrib-jshint@"0.10.0"
-npm install -g grunt-contrib-less@"1.0.1"
-npm install -g grunt-contrib-uglify@"0.8.0"
-npm install -g grunt-contrib-watch@"0.6.1"
-npm install -g grunt-template-jasmine-istanbul@"0.3.3"
 
 echo "Installing openjdk 1.8.0..."
 add-apt-repository -y ppa:openjdk-r/ppa
