@@ -25,4 +25,8 @@ run	apt-get install python3.4 python3.4-dev -y --force-yes
 run	rm -f /usr/bin/python3
 run	ln -s /usr/bin/python3.4 /usr/bin/python3
 run	curl -sL https://bootstrap.pypa.io/get-pip.py | python3
-run      ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+run curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+run sudo apt-get install -y nodejs
+run sudo ln -fs /usr/bin/nodejs /usr/bin/node
+run sudo npm install -g grunt-cli
+run ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
