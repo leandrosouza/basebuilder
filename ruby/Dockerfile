@@ -8,7 +8,7 @@
 
 from	ubuntu:16.04
 run	apt-get update
-run	apt-get install wget software-properties-common -y --force-yes
+run	apt-get install wget software-properties-common sudo -y --force-yes
 run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
