@@ -6,7 +6,7 @@
 # to run it:
 # 1 - tsuru-admin platform-add ruby -d https://raw.github.com/tsuru/basebuilder/master/ruby/Dockerfile
 
-from	ubuntu:14.04
+from	ubuntu:16.04
 run     locale-gen en_US.UTF-8
 env     LANG en_US.UTF-8
 env     LANGUAGE en_US:en
