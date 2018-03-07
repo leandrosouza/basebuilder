@@ -12,7 +12,7 @@ run	apt-get install wget software-properties-common sudo -y --force-yes
 run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
-run	cp /var/lib/tsuru/ruby/deploy /var/lib/tsuru
+run	cp /var/lib/tsuru/ruby-2.2.2/deploy /var/lib/tsuru
 run	cp /var/lib/tsuru/base/start /var/lib/tsuru
-run	/var/lib/tsuru/ruby/install
+run	/var/lib/tsuru/ruby-2.2.2/install
 run      ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
