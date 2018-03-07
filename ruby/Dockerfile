@@ -15,7 +15,7 @@ run	apt-get update
 run	apt-get install wget software-properties-common -y --force-yes
 run add-apt-repository ppa:jonathonf/python-2.7
 run apt-get update
-run apt-get install python2.7 -y
+run apt-get install python2.7 python-dev python-pip python-requests -y
 run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
