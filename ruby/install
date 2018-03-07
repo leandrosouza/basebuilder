@@ -14,8 +14,8 @@ git clone https://github.com/sstephenson/rbenv.git /home/ubuntu/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /home/ubuntu/.bash_profile
 echo 'eval "$(rbenv init -)"' >> /home/ubuntu/.bash_profile
 git clone https://github.com/sstephenson/ruby-build.git /home/ubuntu/.rbenv/plugins/ruby-build
-sudo chown ubuntu:ubuntu /home/ubuntu/.bash_profile
-sudo chown -R ubuntu:ubuntu /home/ubuntu/.rbenv
+chown ubuntu:ubuntu /home/ubuntu/.bash_profile
+chown -R ubuntu:ubuntu /home/ubuntu/.rbenv
 /bin/su - ubuntu -c "rbenv install 2.2.2 -v"
 /bin/su - ubuntu -c "rbenv install 2.2.3 -v"
 /bin/su - ubuntu -c "rbenv install 1.9.3-p551 -v"
