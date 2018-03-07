@@ -6,13 +6,16 @@
 # to run it:
 # 1 - tsuru-admin platform-add ruby -d https://raw.github.com/tsuru/basebuilder/master/ruby/Dockerfile
 
-from	ubuntu:16.04
+from	ubuntu:14.04
 run     locale-gen en_US.UTF-8
 env     LANG en_US.UTF-8
 env     LANGUAGE en_US:en
 env     LC_ALL en_US.UTF-8
 run	apt-get update
 run	apt-get install wget software-properties-common -y --force-yes
+run add-apt-repository ppa:jonathonf/python-2.7
+run apt-get update
+run apt-get install python2.7
 run	wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run	mkdir /var/lib/tsuru
 run	tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
