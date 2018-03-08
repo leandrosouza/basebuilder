@@ -18,6 +18,6 @@ echo "export RUBY_VERSION=2.2.2" |sudo tee --append /etc/profile
 echo "export BUNDLER_VERSION=1.10.6" |sudo tee --append /etc/profile
 
 if [ -f ${CURRENT_DIR}/Gemfile ]; then
-    pushd $CURRENT_DIR && bundle install
+    pushd $CURRENT_DIR && /usr/local/bundle/bin/bundle install
     popd
 fi
