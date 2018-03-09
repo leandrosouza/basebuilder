@@ -18,8 +18,9 @@ cat >> /home/ubuntu/.profile <<EOF
 [ -f /home/application/apprc ] && source /home/application/apprc
 EOF
 
+sudo add-apt-repository ppa:jonathonf/python-2.7
 apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get install curl git openssh-server python-virtualenv python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
+DEBIAN_FRONTEND=noninteractive apt-get install curl git openssh-server python2.7 python-virtualenv python-pip libzmq-dev g++ python-dev wget libyaml-dev -y
 
 virtualenv ${VENV_DIR}
 ${VENV_DIR}/bin/pip install circus==0.11.1 tsuru-circus tsuru-unit-agent
