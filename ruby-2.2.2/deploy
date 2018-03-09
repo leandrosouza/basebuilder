@@ -18,8 +18,8 @@ fi
 
 echo "-- Using ruby version: ${RUBY_VERSION} --"
 
-gem update --system
-gem install bundler --no-rdoc --no-ri
+rbenv exec gem  update --system
+rbenv exec gem install bundler --no-rdoc --no-ri
 
 if [ -f ${CURRENT_DIR}/Gemfile ]; then
     pushd $CURRENT_DIR && rbenv exec bundle install --deployment --path ${CURRENT_DIR}/../vendor/bundle --without ${BUNDLE_WITHOUT-development:test}
