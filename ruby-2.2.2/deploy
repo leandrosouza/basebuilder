@@ -18,7 +18,6 @@ fi
 
 echo "-- Using ruby version: ${RUBY_VERSION} --"
 
-rbenv exec gem  update --system
 rbenv exec gem install bundler --no-rdoc --no-ri
 
 if [ -f ${CURRENT_DIR}/Gemfile ]; then
