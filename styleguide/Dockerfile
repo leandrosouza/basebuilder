@@ -17,3 +17,4 @@ run	   gem install bundle
 run    /var/lib/tsuru/base/install
 run    npm install -g gulp bower node-gyp grunt-cli
 run    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+run    chown -R ubuntu:ubuntu /home/ubuntu/.npm/
