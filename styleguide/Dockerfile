@@ -22,5 +22,10 @@ run    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 run     apt-get update
 run     apt-get install nodejs ruby-full -y --force-yes
 run    npm install -g gulp bower node-gyp grunt-cli
+<<<<<<< HEAD
 run	   gem install bundle
 run     /var/lib/tsuru/static/install
+=======
+run    ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+run    chown -R ubuntu:ubuntu /home/ubuntu/.npm/
+>>>>>>> d2e88b76904e663a828946c135f221ae175a706a
