@@ -4,7 +4,7 @@
 
 # this file describes how to build tsuru static image
 # to run it:
-# 1 - tsuru-admin platform-add static -d https://raw.github.com/tsuru/basebuilder/master/static/Dockerfile
+# 1 - tsuru-admin platform-add styleguide -d https://raw.github.com/tsuru/basebuilder/master/styleguide/Dockerfile
 
 from	ubuntu:14.04
 run     locale-gen en_US.UTF-8
@@ -16,10 +16,9 @@ run     apt-get install wget curl apt-transport-https -y --force-yes
 run     wget http://github.com/leandrosouza/basebuilder/tarball/master -O basebuilder.tar.gz --no-check-certificate
 run     mkdir /var/lib/tsuru
 run     tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
-run     cp /var/lib/tsuru/static/deploy /var/lib/tsuru
+run     cp /var/lib/tsuru/styleguide/deploy /var/lib/tsuru
 run     cp /var/lib/tsuru/base/start /var/lib/tsuru
-run    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+run     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 run     apt-get update
 run     apt-get install nodejs ruby-full -y --force-yes
-run	   gem install bundle
-run     /var/lib/tsuru/static/install
+run	    gem install bundle
