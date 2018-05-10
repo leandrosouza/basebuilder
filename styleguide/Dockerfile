@@ -19,7 +19,7 @@ run		tar -xvf basebuilder.tar.gz -C /var/lib/tsuru --strip 1
 run		cp /var/lib/tsuru/styleguide/deploy /var/lib/tsuru
 run		cp /var/lib/tsuru/base/start /var/lib/tsuru
 run		/var/lib/tsuru/base/install
-run 	apt-get install -y make git
+run		apt-get install -y make git
 run     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 run     apt-get update
 run     apt-get install nodejs ruby-full -y --force-yes
