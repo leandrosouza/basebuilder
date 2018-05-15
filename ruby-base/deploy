@@ -1,0 +1,23 @@
+#!/bin/bash -e
+
+# Copyright 2015 basebuilder authors. All rights reserved.
+# Use of this source code is governed by a BSD-style
+# license that can be found in the LICENSE file.
+
+SOURCE_DIR=/var/lib/tsuru
+source ${SOURCE_DIR}/base/deploy
+source ${SOURCE_DIR}/config
+
+echo "export GEM_HOME=/usr/local/bundle" |sudo tee --append /etc/profile
+echo "export BUNDLE_APP_CONFIG=/usr/local/bundle" |sudo tee --append /etc/profile
+echo "export PATH=$PATH:/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" |sudo tee --append /etc/profile
+echo "export RUBY_DOWNLOAD_SHA256=5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44" |sudo tee --append /etc/profile
+echo "export RUBY_MAJOR=2.2" |sudo tee --append /etc/profile
+echo "export RUBYGEMS_VERSION=2.4.8" |sudo tee --append /etc/profile
+echo "export RUBY_VERSION=2.2.2" |sudo tee --append /etc/profile
+echo "export BUNDLER_VERSION=1.10.6" |sudo tee --append /etc/profile
+
+if [ -f ${CURRENT_DIR}/Gemfile ]; then
+    pushd $CURRENT_DIR && /usr/local/bundle/bin/bundle install
+    popd
+fi
